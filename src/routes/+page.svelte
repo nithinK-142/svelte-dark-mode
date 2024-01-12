@@ -5,7 +5,10 @@
 </script>
 
 <h1 class="pt-10 text-4xl font-semibold text-center text-black dark:text-white">
-  Svelte {$mode} Mode
+  Svelte {#if $mode === undefined}Toggle
+  {:else}
+    {$mode}
+  {/if} Mode
 </h1>
 
 <div class="flex items-center justify-center pt-6">
